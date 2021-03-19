@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jswinternship-dev-14101-authRole",
+      "UnauthRoleArn": "arn:aws:iam::762152076491:role/amplify-jswinternship-dev-14101-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::762152076491:role/amplify-jswinternship-dev-14101-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-jswinternship-dev-14101-deployment",
+      "UnauthRoleName": "amplify-jswinternship-dev-14101-unauthRole",
+      "StackName": "amplify-jswinternship-dev-14101",
+      "StackId": "arn:aws:cloudformation:us-east-1:762152076491:stack/amplify-jswinternship-dev-14101/10b5b250-8826-11eb-b994-0e59b927c447",
+      "AmplifyAppId": "d31y2km1m21oe"
+    }
+  }
+}

@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupFragment"
+    tools:context=".LoginFragment"
     android:background="@color/white">
 
 
@@ -13,7 +13,7 @@
         android:id="@+id/frameLayout2"
         android:layout_width="183dp"
         android:layout_height="121dp"
-        android:background="@drawable/rounded_layout"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,31 +29,31 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="299dp"
-        android:layout_height="372dp"
+        android:layout_width="301dp"
+        android:layout_height="341dp"
         android:background="@drawable/rounded_layout"
-        android:backgroundTint="#E60823F6"
+        android:backgroundTint="#1946a3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
 
         <EditText
-            android:id="@+id/signupEmail"
-            android:layout_width="266dp"
-            android:layout_height="50dp"
+            android:id="@+id/loginEmail"
+            android:layout_width="267dp"
+            android:layout_height="54dp"
             android:ems="10"
-            android:hint="Email"
+            android:hint="Username"
             android:inputType="textPersonName"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sigupName"
-            app:layout_constraintVertical_bias="0.050000012" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
 
         <EditText
-            android:id="@+id/SignupPassword"
+            android:id="@+id/loginPassword"
             android:layout_width="264dp"
             android:layout_height="47dp"
             android:ems="10"
@@ -63,67 +63,41 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/signupEmpcode"
-            app:layout_constraintVertical_bias="0.120000005" />
+            app:layout_constraintTop_toBottomOf="@+id/loginEmail"
+            app:layout_constraintVertical_bias="0.23000002" />
 
         <Button
-            android:id="@+id/SignupSubmit"
+            android:id="@+id/LoginSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
-            app:backgroundTint="#EF1616"
+            app:backgroundTint="#be1720"
             app:cornerRadius="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SignupPassword" />
-
-        <EditText
-            android:id="@+id/sigupName"
-            android:layout_width="262dp"
-            android:layout_height="41dp"
-            android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.110000014" />
-
-        <EditText
-            android:id="@+id/signupEmpcode"
-            android:layout_width="263dp"
-            android:layout_height="41dp"
-            android:ems="10"
-            android:hint="Emp. Code"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/signupEmail"
-            app:layout_constraintVertical_bias="0.100000024" />
+            app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/signuptologin"
-        android:layout_width="240dp"
-        android:layout_height="23dp"
-        android:gravity="center"
-        android:text="Already have account? Login"
+        android:id="@+id/logintosignup"
+        android:layout_width="136dp"
+        android:layout_height="34dp"
+        android:text="New user? SignUp"
         android:textColor="#2B2A2A"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="165dp"
-        android:layout_height="48dp"
+        android:layout_width="170dp"
+        android:layout_height="62dp"
         android:fontFamily="@font/denk_one"
-        android:text="Sign Up"
+        android:text="Log In"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40sp"
