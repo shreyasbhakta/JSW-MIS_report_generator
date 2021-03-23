@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jsw_mis_report_generator">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JSWMIS_report_generator">
-        <activity android:name=".Signup"></activity>
-        <activity android:name=".Login" />
+        <activity android:name=".LoginManagement.LoginSignupActivity"></activity>
+        <activity android:name=".inputForms.inputFormsActivity" />
+        <activity android:name=".LoginManagement.Signup.Signup" />
+        <activity android:name=".LoginManagement.Login.Login" />
         <activity android:name=".Onboarding" />
         <activity android:name=".Splash">
             <intent-filter>

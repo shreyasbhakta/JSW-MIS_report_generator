@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginManagement.LoginSignupActivity">
 
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="185dp"
-        android:layout_height="86dp"
-        android:gravity="center"
-        android:text="Hello"
-        android:textSize="24sp"
+    <fragment
+        android:id="@+id/fragmentSwitch"
+        android:name="com.example.jsw_mis_report_generator.LoginManagement.Signup.SignupFragment"
+        android:layout_width="404dp"
+        android:layout_height="727dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

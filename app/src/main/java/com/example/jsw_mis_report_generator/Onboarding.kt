@@ -1,7 +1,6 @@
 package com.example.jsw_mis_report_generator
 
 import android.content.Intent
-import android.graphics.drawable.DrawableContainer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
@@ -12,8 +11,8 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.jsw_mis_report_generator.LoginManagement.LoginSignupActivity
 import com.google.android.material.button.MaterialButton
-import java.text.FieldPosition
 
 class Onboarding : AppCompatActivity() {
 
@@ -79,7 +78,7 @@ class Onboarding : AppCompatActivity() {
     }
 
     private fun navigateToHomeActivity() {
-        startActivity(Intent(applicationContext, Signup::class.java))
+        startActivity(Intent(applicationContext, LoginSignupActivity::class.java))
         finish()
     }
 

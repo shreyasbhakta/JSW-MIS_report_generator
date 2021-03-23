@@ -1,7 +1,8 @@
-package com.example.jsw_mis_report_generator
+package com.example.jsw_mis_report_generator.LoginManagement.Login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.jsw_mis_report_generator.R
 
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
