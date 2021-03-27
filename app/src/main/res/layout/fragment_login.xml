@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
 
         <EditText
-            android:id="@+id/loginEmail"
+            android:id="@+id/LoginEmail"
             android:layout_width="267dp"
             android:layout_height="54dp"
             android:ems="10"
@@ -63,7 +63,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginEmail"
+            app:layout_constraintTop_toBottomOf="@+id/LoginEmail"
             app:layout_constraintVertical_bias="0.23000002" />
 
         <Button
@@ -108,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/forgotFromLogin"
         android:layout_width="131dp"
         android:layout_height="24dp"
         android:gravity="center"

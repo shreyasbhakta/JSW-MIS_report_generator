@@ -11,15 +11,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.example.jsw_mis_report_generator.LoginManagement.Login.Login
 import com.example.jsw_mis_report_generator.MainActivity
 import com.example.jsw_mis_report_generator.R
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_signup.*
-import kotlinx.android.synthetic.main.activity_signup.SignupPassword
-import kotlinx.android.synthetic.main.activity_signup.SignupSubmit
-import kotlinx.android.synthetic.main.activity_signup.signupEmail
-import kotlinx.android.synthetic.main.activity_signup.signupEmpcode
-import kotlinx.android.synthetic.main.activity_signup.sigupName
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.fragment_login.*
+
 import kotlinx.android.synthetic.main.fragment_signup.*
 
 
@@ -31,6 +30,8 @@ class SignupFragment : Fragment() {
 
     private lateinit var viewModel: SignupViewmodel
     private lateinit var auth: FirebaseAuth
+    private lateinit var refusers:DatabaseReference
+    private  var firebaseUserId : String=""
     var TAG ="MainActivity"
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -73,18 +74,41 @@ class SignupFragment : Fragment() {
                         .addOnCompleteListener(){ task->
                             if (task.isSuccessful){
                                 Log.d(TAG, "hello")
-                                val intent = Intent(requireContext(),MainActivity::class.java)
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                                startActivity(intent)
-                                activity?.finish()
+                                firebaseUserId=auth.currentUser!!.uid
+                                refusers= FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserId)
+
+
+                                val userHashmap =HashMap<String,Any>()
+
+                                userHashmap["uid"]=firebaseUserId
+                                userHashmap["Name"]=name
+                                userHashmap["Email"]=email
+                                userHashmap["Empcode"]=empcode
+                                refusers.updateChildren(userHashmap)
+                                        .addOnCompleteListener { task->
+                                            val intent = Intent(requireContext(),MainActivity::class.java)
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                                            startActivity(intent)
+                                            activity?.finish()
+                                        }
+
                             } else {
-                                Toast.makeText(context, "Authentication Failed!!!",Toast.LENGTH_SHORT).show()
+                                Toast.makeText(context, "Some error occurred!!! (make sure your email id is not registered before)",Toast.LENGTH_SHORT).show()
                             }
                         }
                         .addOnFailureListener(){task->
                             Log.d(TAG, "$task")
                         }
             }
+        }
+
+
+        signuptologin.setOnClickListener {
+            val intent = Intent(requireContext(), Login::class.java)
+            startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+            activity?.finish()
         }
     }
 

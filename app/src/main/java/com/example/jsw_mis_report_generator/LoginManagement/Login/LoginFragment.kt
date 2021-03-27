@@ -10,6 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
+import com.example.jsw_mis_report_generator.LoginManagement.ForgotPassword.ForgotPassword
+import com.example.jsw_mis_report_generator.LoginManagement.Signup.Signup
 import com.example.jsw_mis_report_generator.MainActivity
 import com.example.jsw_mis_report_generator.R
 import com.google.firebase.auth.FirebaseAuth
@@ -39,18 +41,18 @@ class LoginFragment : Fragment() {
         mauth= FirebaseAuth.getInstance()
 
         LoginSubmit.setOnClickListener(){
-            val email = loginEmail.text.toString()
+            val email = LoginEmail.text.toString()
             val password = loginPassword.text.toString()
 
             if(email.isEmpty()){
-                loginEmail.error="Username Empty"
-                loginEmail.requestFocus()
+                LoginEmail.error="Username Empty"
+                LoginEmail.requestFocus()
             }else if (password.isEmpty()){
                 loginPassword.error="Password Empty"
                 loginPassword.requestFocus()
             }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                loginEmail.error="Invalid Username"
-                loginEmail.requestFocus()
+                LoginEmail.error="Invalid Username"
+                LoginEmail.requestFocus()
             }
             else{
                 mauth.signInWithEmailAndPassword(email,password)
@@ -68,6 +70,22 @@ class LoginFragment : Fragment() {
                         }
                     }
             }
+        }
+
+        logintosignup.setOnClickListener {
+            val intent = Intent(requireContext(), Signup::class.java)
+            startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+            activity?.finish()
+        }
+
+        forgotFromLogin.setOnClickListener {
+            val intent = Intent(requireContext(), ForgotPassword::class.java)
+            startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+
         }
     }
 
