@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "JSW-MIS_report_generator"
