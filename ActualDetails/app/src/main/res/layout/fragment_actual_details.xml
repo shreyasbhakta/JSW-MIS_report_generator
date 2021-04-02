@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActualDetailsF"
+    tools:ignore="ExtraText">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bluebackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".40"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/curved_part"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text2_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:gravity="center"
+                        android:paddingLeft="100dp"
+                        android:paddingRight="100dp"
+                        android:text="Enter Actual Production Details"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent=".82"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.097" />
+
+                    <EditText
+                        android:id="@+id/productiondate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Production Date"
+                        android:layout_marginTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/ordernum"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/ordernum"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/text_background"
+                        app:layout_constraintVertical_bias="0.07"
+                        app:layout_constraintWidth_percent=".8" />
+
+                    <EditText
+                        android:id="@+id/ordernum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Order No"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/productionunit"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/productionunit"
+                        app:layout_constraintTop_toTopOf="@id/productiondate"
+                        android:background="@drawable/text_background"
+                        app:layout_constraintVertical_bias="0.104"
+                        app:layout_constraintWidth_percent=".8" />
+
+                    <EditText
+                        android:id="@+id/productionunit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Production Unit"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/heatno"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/heatno"
+                        app:layout_constraintTop_toTopOf="@id/ordernum"
+                        android:background="@drawable/text_background"
+                        app:layout_constraintVertical_bias="0.125"
+                        app:layout_constraintWidth_percent=".8" />
+
+                    <EditText
+                        android:id="@+id/heatno"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Heat No"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/plangrade"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/plangrade"
+                        app:layout_constraintTop_toTopOf="@id/productionunit"
+                        android:background="@drawable/text_background"
+                        app:layout_constraintVertical_bias="0.141"
+                        app:layout_constraintWidth_percent=".8" />
+
+                    <EditText
+                        android:id="@+id/plangrade"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/finalgrade"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/finalgrade"
+                        app:layout_constraintTop_toTopOf="@id/heatno"
+                        app:layout_constraintVertical_bias="0.17"
+                        app:layout_constraintWidth_percent=".8"
+                        android:background="@drawable/text_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Plan Grade"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp" />
+
+                    <EditText
+                        android:id="@+id/finalgrade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Final Grade"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tonnage"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/tonnage"
+                        app:layout_constraintTop_toTopOf="@id/plangrade"
+                        android:background="@drawable/text_background"
+                        app:layout_constraintVertical_bias="0.221"
+                        app:layout_constraintWidth_percent=".8" />
+
+                    <EditText
+                        android:id="@+id/tonnage"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/remarks"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/remarks"
+                        app:layout_constraintTop_toTopOf="@id/finalgrade"
+                        app:layout_constraintVertical_bias="0.282"
+                        app:layout_constraintWidth_percent=".8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Tonnage"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:background="@drawable/text_background"
+                        tools:layout_editor_absoluteX="145dp"
+                        tools:layout_editor_absoluteY="514dp" />
+
+                    <EditText
+                        android:id="@+id/remarks"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tonnage"
+                        app:layout_constraintVertical_bias="0.4"
+                        app:layout_constraintWidth_percent=".8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Remarks"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:background="@drawable/text_background"
+                        tools:layout_editor_absoluteX="144dp"
+                        tools:layout_editor_absoluteY="582dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="#00BCD4"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:text="UPGRADE"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/remarks"
+                        app:layout_constraintWidth_percent=".8" />
+
+
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/jswpic"
+        android:layout_width="117dp"
+        android:layout_height="77dp"
+        android:src="@drawable/jswpic"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="190dp"
+        android:layout_height="29dp"
+        android:autoSizeMaxTextSize="16sp"
+        android:text="Better Everyday"
+        android:textAlignment="center"
+        android:textColor="#F41505"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/jswpic"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/jswpic"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_home"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="37dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toEndOf="@+id/jswpic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic__menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
