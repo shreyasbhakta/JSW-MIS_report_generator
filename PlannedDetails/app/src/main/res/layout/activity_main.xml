@@ -8,10 +8,10 @@
 
 
     <fragment
-        android:id="@+id/fragment2"
-        android:name="com.example.actualdetails.ActualDetailsF"
+        android:id="@+id/fragment"
+        android:name="com.example.planneddetails.PlannedDetailsF"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="189dp"
-        tools:layout_editor_absoluteY="308dp" />
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="192dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

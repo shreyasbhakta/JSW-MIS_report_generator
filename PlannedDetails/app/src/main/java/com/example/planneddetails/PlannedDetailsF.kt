@@ -1,4 +1,4 @@
-package com.example.actualdetails
+package com.example.planneddetails
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ActualDetailsF.newInstance] factory method to
+ * Use the [PlannedDetailsF.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ActualDetailsF : Fragment() {
+class PlannedDetailsF : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class ActualDetailsF : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_actual_details, container, false)
+        return inflater.inflate(R.layout.fragment_planned_details, container, false)
     }
 
     companion object {
@@ -44,12 +44,12 @@ class ActualDetailsF : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ActualDetailsF.
+         * @return A new instance of fragment PlannedDetailsF.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ActualDetailsF().apply {
+            PlannedDetailsF().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

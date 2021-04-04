@@ -1,4 +1,4 @@
-package com.example.actualdetails
+package com.example.planneddetails
 
 import org.junit.Test
 
