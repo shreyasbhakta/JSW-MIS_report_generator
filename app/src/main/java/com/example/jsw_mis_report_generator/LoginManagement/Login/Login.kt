@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContentProviderCompat.requireContext
+import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
 import com.example.jsw_mis_report_generator.MainActivity
 import com.example.jsw_mis_report_generator.R
 import com.google.firebase.auth.FirebaseAuth
@@ -27,7 +28,7 @@ class Login : AppCompatActivity() {
         auth = Firebase.auth
         val currentUser = auth.currentUser
         if(currentUser != null){
-            val intent = Intent(applicationContext, MainActivity::class.java)
+            val intent = Intent(applicationContext, HomeScreen::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()

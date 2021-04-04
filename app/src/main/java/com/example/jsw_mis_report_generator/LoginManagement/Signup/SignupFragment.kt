@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
 import com.example.jsw_mis_report_generator.LoginManagement.Login.Login
 import com.example.jsw_mis_report_generator.MainActivity
 import com.example.jsw_mis_report_generator.R
@@ -72,21 +73,21 @@ class SignupFragment : Fragment() {
 
                 auth.createUserWithEmailAndPassword(email,password)
                         .addOnCompleteListener(){ task->
-                            if (task.isSuccessful){
+                            if (task.isSuccessful) {
                                 Log.d(TAG, "hello")
-                                firebaseUserId=auth.currentUser!!.uid
-                                refusers= FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserId)
+                                firebaseUserId = auth.currentUser!!.uid
+                                refusers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserId)
 
 
-                                val userHashmap =HashMap<String,Any>()
+                                val userHashmap = HashMap<String, Any>()
 
-                                userHashmap["uid"]=firebaseUserId
-                                userHashmap["Name"]=name
-                                userHashmap["Email"]=email
-                                userHashmap["Empcode"]=empcode
+                                userHashmap["uid"] = firebaseUserId
+                                userHashmap["Name"] = name
+                                userHashmap["Email"] = email
+                                userHashmap["Empcode"] = empcode
                                 refusers.updateChildren(userHashmap)
-                                        .addOnCompleteListener { task->
-                                            val intent = Intent(requireContext(),MainActivity::class.java)
+                                        .addOnCompleteListener { task ->
+                                            val intent = Intent(requireContext(), HomeScreen::class.java)
                                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                                             startActivity(intent)
                                             activity?.finish()
@@ -95,6 +96,7 @@ class SignupFragment : Fragment() {
                             } else {
                                 Toast.makeText(context, "Some error occurred!!! (make sure your email id is not registered before)",Toast.LENGTH_SHORT).show()
                             }
+
                         }
                         .addOnFailureListener(){task->
                             Log.d(TAG, "$task")

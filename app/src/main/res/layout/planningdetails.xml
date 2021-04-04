@@ -5,137 +5,171 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/plandate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Plan Date"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ordernum"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ordernum"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/text_background"
-        app:layout_constraintVertical_bias="0.07"
-        app:layout_constraintWidth_percent=".8" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/ordernum"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Order No"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/productionunit"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/productionunit"
-        app:layout_constraintTop_toTopOf="@id/plandate"
-        android:background="@drawable/text_background"
-        app:layout_constraintVertical_bias="0.12"
-        app:layout_constraintWidth_percent=".8" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
 
-    <EditText
-        android:id="@+id/productionunit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Production Unit"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/grade"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/grade"
-        app:layout_constraintTop_toTopOf="@id/ordernum"
-        android:background="@drawable/text_background"
-        app:layout_constraintVertical_bias="0.14"
-        app:layout_constraintWidth_percent=".8" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/grade"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Grade"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/noofheats"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/noofheats"
-        app:layout_constraintTop_toTopOf="@id/productionunit"
-        android:background="@drawable/text_background"
-        app:layout_constraintVertical_bias="0.17"
-        app:layout_constraintWidth_percent=".8" />
+                <EditText
+                    android:id="@+id/plandate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Plan Date"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ordernum"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/ordernum"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/text_background"
+                    app:layout_constraintVertical_bias="0.07"
+                    app:layout_constraintWidth_percent=".8" />
 
-    <EditText
-        android:id="@+id/noofheats"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="No. of Heats"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tonnage"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tonnage"
-        android:background="@drawable/text_background"
-        app:layout_constraintTop_toTopOf="@id/grade"
-        app:layout_constraintVertical_bias="0.209"
-        app:layout_constraintWidth_percent=".8" />
+                <EditText
+                    android:id="@+id/ordernum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Order No"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/productionunit"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/productionunit"
+                    app:layout_constraintTop_toTopOf="@+id/plandate"
+                    android:background="@drawable/text_background"
+                    app:layout_constraintVertical_bias="0.12"
+                    app:layout_constraintWidth_percent=".8" />
 
-    <EditText
-        android:id="@+id/tonnage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Tonnage"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/remarks"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/remarks"
-        app:layout_constraintTop_toTopOf="@id/noofheats"
-        android:background="@drawable/text_background"
-        app:layout_constraintVertical_bias="0.282"
-        app:layout_constraintWidth_percent=".8" />
+                <EditText
+                    android:id="@+id/productionunit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Production Unit"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/grade"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/grade"
+                    app:layout_constraintTop_toTopOf="@id/ordernum"
+                    android:background="@drawable/text_background"
+                    app:layout_constraintVertical_bias="0.14"
+                    app:layout_constraintWidth_percent=".8" />
 
-    <EditText
-        android:id="@+id/remarks"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Remarks"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tonnage"
-        android:background="@drawable/text_background"
-        app:layout_constraintVertical_bias="0.342"
-        app:layout_constraintWidth_percent=".8" />
+                <EditText
+                    android:id="@+id/grade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Grade"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/noofheats"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/noofheats"
+                    app:layout_constraintTop_toTopOf="@id/productionunit"
+                    android:background="@drawable/text_background"
+                    app:layout_constraintVertical_bias="0.17"
+                    app:layout_constraintWidth_percent=".8" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="UPGRADE"
-        android:textColor="@color/black"
-        android:background="@drawable/button_background"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/remarks"
-        app:layout_constraintWidth_percent=".8" />
+                <EditText
+                    android:id="@+id/noofheats"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="No. of Heats"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tonnage"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tonnage"
+                    android:background="@drawable/text_background"
+                    app:layout_constraintTop_toTopOf="@id/grade"
+                    app:layout_constraintVertical_bias="0.209"
+                    app:layout_constraintWidth_percent=".8" />
+
+                <EditText
+                    android:id="@+id/tonnage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Tonnage"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/remarks"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/remarks"
+                    app:layout_constraintTop_toTopOf="@id/noofheats"
+                    android:background="@drawable/text_background"
+                    app:layout_constraintVertical_bias="0.282"
+                    app:layout_constraintWidth_percent=".8" />
+
+                <EditText
+                    android:id="@+id/remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Remarks"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tonnage"
+                    android:background="@drawable/text_background"
+                    app:layout_constraintVertical_bias="0.342"
+                    app:layout_constraintWidth_percent=".8" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_background"
+                    android:text="UPGRADE"
+                    android:layout_gravity="center"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/remarks"
+                    app:layout_constraintWidth_percent=".8" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

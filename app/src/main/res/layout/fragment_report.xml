@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".HomeScreen.HomeFragment">
+    tools:context=".ReportFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,28 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic__menu"
-        tools:ignore="MissingPrefix,VectorDrawableCompat"/>
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_home"
-        tools:ignore="MissingPrefix,VectorDrawableCompat"/>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -48,47 +28,47 @@
         android:fontFamily="sans-serif-medium"
         android:text="Better Everyday"
         android:textColor="#D32323"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.883" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="152dp"
-        android:layout_height="156dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/jswpic" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="340dp"
+        android:layout_height="308dp"
         android:orientation="horizontal"
         android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/white"
-            android:id="@+id/reportgeneration"
+            app:cardCornerRadius="20dp"
             app:cardElevation="5dp">
 
             <RelativeLayout
-                android:id="@+id/homeToReportGeneration"
+                android:id="@+id/reportUpdateDetails"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -99,24 +79,24 @@
                     android:layout_below="@id/imageView2"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Report Generation"
+                    android:text="Update Details"
                     android:textAlignment="center"
                     android:textColor="#090909"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
-                    app:srcCompat="@drawable/view_report" />
+                    app:srcCompat="@drawable/update_image" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -125,20 +105,19 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            app:cardCornerRadius="20dp"
-            android:id="@+id/customerdetails"
             app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
             app:cardElevation="5dp">
 
             <RelativeLayout
-                android:id="@+id/homeToCustomerdetails"
+                android:id="@+id/reportViewDetails"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="5dp"
@@ -146,7 +125,7 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     android:foregroundGravity="center_horizontal"
-                    app:srcCompat="@drawable/customer_details" />
+                    app:srcCompat="@drawable/view_rp_img" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -155,7 +134,7 @@
                     android:layout_below="@id/imageView3"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:text="Customer Details"
+                    android:text="View Details"
                     android:textAlignment="center"
                     android:textColor="#090909"
                     android:textSize="18sp" />
@@ -164,60 +143,47 @@
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal"
-        android:padding="15dp"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="3dp"
+        app:srcCompat="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingPrefix,VectorDrawableCompat"/>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/ic__menu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingPrefix,VectorDrawableCompat"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="361dp"
+        android:layout_height="166dp"
+        android:text="Before filling the details, please go through the following instructions carefully. \n
+Instructions: \n
+1)  For updating the details, please do fill all the fields with appropriate datatype and click on UPGRADE button.
+\n 2) For viewing the details of the production,please do provide the correct Date(the day on which you want to view the production ) and click on OK button."
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.110000014" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="20dp"
-            android:id="@+id/contactus"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="5dp">
 
-            <RelativeLayout
-                android:id="@+id/homeToAboutUs"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/imageView4"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Contact US"
-                    android:textAlignment="center"
-                    android:textColor="#090909"
-                    android:textSize="18sp" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    app:srcCompat="@drawable/contact_us_img" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

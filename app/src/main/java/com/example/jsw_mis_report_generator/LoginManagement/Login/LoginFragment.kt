@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
+import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
 import com.example.jsw_mis_report_generator.LoginManagement.ForgotPassword.ForgotPassword
 import com.example.jsw_mis_report_generator.LoginManagement.Signup.Signup
 import com.example.jsw_mis_report_generator.MainActivity
@@ -59,7 +60,7 @@ class LoginFragment : Fragment() {
                     .addOnCompleteListener() { task ->
                         if (task.isSuccessful){
                             Log.d(TAG,"Login Successfull")
-                            val intent = Intent(requireContext(),MainActivity::class.java)
+                            val intent = Intent(requireContext(),HomeScreen::class.java)
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                             startActivity(intent)
                             activity?.finish()

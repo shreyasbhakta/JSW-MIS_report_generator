@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import android.widget.TextView
+import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
 import kotlinx.android.synthetic.main.activity_onboarding.*
 import kotlinx.android.synthetic.main.activity_splash.*
 import kotlin.random.Random
@@ -29,6 +30,7 @@ class Splash : AppCompatActivity() {
         /*val view =inflater.inflate(R.layout.fragment_splash, container, false)*/
 
         val random = Random.nextInt(Constants.tagLineSize)
+        splashrandomn!!.text= Constants.tagLines[random]
 
 
     }
