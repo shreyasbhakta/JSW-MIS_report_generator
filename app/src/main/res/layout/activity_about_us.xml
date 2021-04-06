@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs">
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="20dp"
+        android:layout_height="650dp"
+        android:background="#E6232222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="650dp"
+        android:background="#CC16469D"
+        app:layout_constraintStart_toEndOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        android:background="#16469d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/jsw_logo"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/about_home"
+        android:layout_width="41dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="#16469d"
+        android:src="@drawable/ic_home"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="@id/about_menu"
+        app:layout_constraintEnd_toStartOf="@id/about_menu"
+        app:layout_constraintBottom_toBottomOf="@id/about_menu"/>
+
+    <ImageButton
+        android:id="@+id/about_menu"
+        android:layout_width="41dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="10dp"
+        android:background="#16469d"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="291dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/jsw_about" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="50dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="About JSW"
+                android:textAlignment="center"
+                android:textColor="#16469d"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:text="It is an integral part of the O. P. Jindal Group, and has been a part of major projects that have played a key role in India’s growth.
+                \n\nRanked among India's top business houses, JSW's innovative and sustainable ideas cater to the core sectors of Steel, Energy, Cement and Infrastructure. The Group continues to strive for excellence with its strength, differentiated product mix, state-of-the-art technology, excellence in execution and focus on sustainability."
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Follow Us"
+                android:textColor="#3e578a"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#FFFFFF">
+
+                <ImageButton
+                    android:id="@+id/twitter"
+                    android:layout_width="64dp"
+                    android:layout_height="57dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#FFFFFF"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/twitter" />
+
+                <ImageButton
+                    android:id="@+id/facebook"
+                    android:layout_width="64dp"
+                    android:layout_height="57dp"
+                    android:background="#FFFFFF"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/facebook" />
+
+                <ImageButton
+                    android:id="@+id/youtube"
+                    android:layout_width="64dp"
+                    android:layout_height="57dp"
+                    android:background="#FFFFFF"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ytube" />
+
+                <ImageButton
+                    android:id="@+id/linkedin"
+                    android:layout_width="64dp"
+                    android:layout_height="57dp"
+                    android:background="#FFFFFF"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/linkedin" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#CC16469D" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

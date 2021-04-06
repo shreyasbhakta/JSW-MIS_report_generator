@@ -27,6 +27,8 @@ class LoginFragment : Fragment() {
 
     private lateinit var viewmodel: LoginViewmodel
     private lateinit var mauth :FirebaseAuth
+
+    var emailPattern = "[a-zA-Z0-9._-]+@jsw+\\.+in"
     var TAG="LOGIN"
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,6 +55,10 @@ class LoginFragment : Fragment() {
                 loginPassword.requestFocus()
             }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                 LoginEmail.error="Invalid Username"
+                LoginEmail.requestFocus()
+            }
+            else if (!LoginEmail.text.toString().trim { it <= ' ' }.matches(emailPattern.toRegex())){
+                LoginEmail.error="Use JSW domain emailID"
                 LoginEmail.requestFocus()
             }
             else{

@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import com.example.jsw_mis_report_generator.*
-import com.example.jsw_mis_report_generator.LoginManagement.ForgotPassword.ForgotPassword
+import com.example.jsw_mis_report_generator.Forms.customerDetails.Customer
+import com.example.jsw_mis_report_generator.report.Report
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_login.*
 
 class HomeFragment : Fragment() {
 
@@ -46,13 +46,21 @@ class HomeFragment : Fragment() {
 
         }
 
-      /*  homeToAboutUs.setOnClickListener {
-            val intent = Intent(requireContext(), ::class.java)
+        hometoUsermenu.setOnClickListener {
+            val intent=Intent(requireContext(), userMenuScreen::class.java)
+            startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+            activity?.finish()
+        }
+
+       homeToAboutUs.setOnClickListener {
+            val intent = Intent(requireContext(),AboutUs ::class.java)
             startActivity(intent)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
 
-        }*/
+        }
 
         homeToCustomerdetails.setOnClickListener {
             val intent = Intent(requireContext(), Customer::class.java)

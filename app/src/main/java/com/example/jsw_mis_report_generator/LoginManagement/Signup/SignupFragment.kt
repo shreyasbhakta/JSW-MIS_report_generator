@@ -33,6 +33,7 @@ class SignupFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var refusers:DatabaseReference
     private  var firebaseUserId : String=""
+    var emailPattern = "[a-zA-Z0-9._-]+@jsw+\\.+in"
     var TAG ="MainActivity"
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -69,7 +70,15 @@ class SignupFragment : Fragment() {
             }else if (password.isEmpty()){
                 SignupPassword.error = "Password Empty"
                 SignupPassword.requestFocus()
-            }else{
+            }else if (!signupEmail.text.toString().trim { it <= ' ' }.matches(emailPattern.toRegex())){
+                signupEmail.error="Use JSW domain emailID"
+                signupEmail.requestFocus()
+            }
+            else if (password.length<8){
+                SignupPassword.error = "Password length should be >=8"
+                SignupPassword.requestFocus()
+            }
+            else{
 
                 auth.createUserWithEmailAndPassword(email,password)
                         .addOnCompleteListener(){ task->

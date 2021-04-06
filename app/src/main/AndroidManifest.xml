@@ -12,16 +12,20 @@
         android:roundIcon="@drawable/switching_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.JSWMIS_report_generator">
-        <activity android:name=".actualDetails"></activity>
+        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".userMenuScreen" />
+        <activity android:name=".Forms.customerDetails.CustomerInputForm" />
+        <activity android:name=".report.ReportGeneration" />
+        <activity android:name=".Forms.plannedDetails.plannedDetails" />
+        <activity android:name=".Forms.productionDetails.actualDetails" />
         <activity android:name=".LoginManagement.ForgotPassword.ForgotPassword" />
         <activity android:name=".HomeScreen.HomeScreen" />
-        <activity android:name=".inputForms.inputFormsActivity" />
+        <activity android:name=".Forms.inputForms.inputFormsActivity" />
         <activity android:name=".LoginManagement.Signup.Signup" />
         <activity android:name=".LoginManagement.Login.Login" />
-        <activity android:name=".Customer" />
-        <activity android:name=".Report" />
-        <activity android:name=".CustomerInputForm" />
-        <activity android:name=".Onboarding" />
+        <activity android:name=".Forms.customerDetails.Customer" />
+        <activity android:name=".report.Report" />
+        <activity android:name=".Onboarding.Onboarding" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

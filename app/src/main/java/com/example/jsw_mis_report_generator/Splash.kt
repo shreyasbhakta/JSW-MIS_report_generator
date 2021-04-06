@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import android.widget.TextView
-import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
-import kotlinx.android.synthetic.main.activity_onboarding.*
+import com.example.jsw_mis_report_generator.Onboarding.Onboarding
 import kotlinx.android.synthetic.main.activity_splash.*
 import kotlin.random.Random
 
@@ -23,7 +21,7 @@ class Splash : AppCompatActivity() {
         handler = Handler()
         handler.postDelayed({
 
-            val intent = Intent(this,Onboarding::class.java)
+            val intent = Intent(this, Onboarding::class.java)
             startActivity(intent)
             finish()
         }, 3000)
