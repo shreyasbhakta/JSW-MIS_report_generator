@@ -7,7 +7,7 @@ import com.example.jsw_mis_report_generator.Forms.productionDetails.actualDetail
 import com.example.jsw_mis_report_generator.Forms.plannedDetails.plannedDetails
 import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
 import com.example.jsw_mis_report_generator.R
-import com.example.jsw_mis_report_generator.userMenuScreen
+import com.example.jsw_mis_report_generator.usermenu.userMenuScreen
 import kotlinx.android.synthetic.main.activity_report_generation.*
 
 class ReportGeneration : AppCompatActivity() {

@@ -4,8 +4,9 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
-import com.example.jsw_mis_report_generator.LoginManagement.Login.Login
+import com.example.jsw_mis_report_generator.usermenu.userMenuScreen
 import kotlinx.android.synthetic.main.activity_about_us.*
 
 class AboutUs : AppCompatActivity() {
@@ -28,6 +29,12 @@ class AboutUs : AppCompatActivity() {
         }
 
         supportActionBar?.hide()
+
+        val twitter = findViewById<ImageButton>(R.id.twitter)
+        val facebook = findViewById<ImageButton>(R.id.facebook)
+        val youtube = findViewById<ImageButton>(R.id.youtube)
+        val linkedin = findViewById<ImageButton>(R.id.linkedin)
+
 
         twitter.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)

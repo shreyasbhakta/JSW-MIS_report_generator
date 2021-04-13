@@ -8,15 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
-import com.example.jsw_mis_report_generator.Forms.customerDetails.CustomerInputViewmodel
-import com.example.jsw_mis_report_generator.Forms.plannedDetails.plannedDetails
-import com.example.jsw_mis_report_generator.HomeScreen.HomeFragment
 import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
-import com.example.jsw_mis_report_generator.LoginManagement.Login.Login
 import com.example.jsw_mis_report_generator.R
 import com.example.jsw_mis_report_generator.models.ActualDetailsData
-import com.example.jsw_mis_report_generator.models.PlannedDetailsData
-import com.example.jsw_mis_report_generator.userMenuScreen
+import com.example.jsw_mis_report_generator.usermenu.userMenuScreen
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_actual_details.*
@@ -24,7 +19,6 @@ import kotlinx.android.synthetic.main.fragment_actual_details.ordernum
 import kotlinx.android.synthetic.main.fragment_actual_details.productionunit
 import kotlinx.android.synthetic.main.fragment_actual_details.remarks
 import kotlinx.android.synthetic.main.fragment_actual_details.tonnage
-import kotlinx.android.synthetic.main.fragment_planned_details.*
 
 class actualDetailsFragment : Fragment() {
 
@@ -57,7 +51,7 @@ class actualDetailsFragment : Fragment() {
         }
 
         actualDetailstoUserMenu.setOnClickListener {
-            val intent=Intent(requireContext(),userMenuScreen::class.java)
+            val intent=Intent(requireContext(), userMenuScreen::class.java)
             startActivity(intent)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)

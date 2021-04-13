@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.jsw_mis_report_generator.*
 import com.example.jsw_mis_report_generator.Forms.customerDetails.Customer
 import com.example.jsw_mis_report_generator.report.Report
+import com.example.jsw_mis_report_generator.usermenu.userMenuScreen
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {

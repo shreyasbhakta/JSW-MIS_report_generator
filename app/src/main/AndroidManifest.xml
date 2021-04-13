@@ -12,8 +12,9 @@
         android:roundIcon="@drawable/switching_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.JSWMIS_report_generator">
-        <activity android:name=".AboutUs"></activity>
-        <activity android:name=".userMenuScreen" />
+        <activity android:name=".usermenu.UpdateUserDetails"></activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".usermenu.userMenuScreen" />
         <activity android:name=".Forms.customerDetails.CustomerInputForm" />
         <activity android:name=".report.ReportGeneration" />
         <activity android:name=".Forms.plannedDetails.plannedDetails" />

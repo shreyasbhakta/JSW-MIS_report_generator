@@ -8,12 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
-import com.example.jsw_mis_report_generator.Forms.plannedDetails.plannedDetailsFragment
 import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
-import com.example.jsw_mis_report_generator.LoginManagement.Login.Login
 import com.example.jsw_mis_report_generator.R
 import com.example.jsw_mis_report_generator.models.CustomerDetails
-import com.example.jsw_mis_report_generator.userMenuScreen
+import com.example.jsw_mis_report_generator.usermenu.userMenuScreen
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_customer_input_form.*
@@ -51,7 +49,7 @@ class CustomerInputFormFragment : Fragment() {
         }
 
         cusDetailstoUserMenu.setOnClickListener {
-            val intent=Intent(requireContext(),userMenuScreen::class.java)
+            val intent=Intent(requireContext(), userMenuScreen::class.java)
             startActivity(intent)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)

@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
 import com.example.jsw_mis_report_generator.R
-import com.example.jsw_mis_report_generator.userMenuScreen
+import com.example.jsw_mis_report_generator.usermenu.userMenuScreen
 import kotlinx.android.synthetic.main.fragment_customer.*
 
 

@@ -1,4 +1,4 @@
-package com.example.jsw_mis_report_generator
+package com.example.jsw_mis_report_generator.usermenu
 
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
 import com.example.jsw_mis_report_generator.LoginManagement.Login.Login
+import com.example.jsw_mis_report_generator.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -55,6 +56,13 @@ class userMenuScreen : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
+        }
+
+        buttonEditProfile.setOnClickListener {
+            val intent = Intent(applicationContext, UpdateUserDetails::class.java)
+            startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
         }
 
         buttonResetPassword.setOnClickListener {
