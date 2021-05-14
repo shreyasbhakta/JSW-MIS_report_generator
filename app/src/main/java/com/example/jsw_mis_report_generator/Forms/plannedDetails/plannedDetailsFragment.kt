@@ -17,6 +17,13 @@ import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_home.gotoHomeFromplanned
 import kotlinx.android.synthetic.main.fragment_home.plannedDetailstoUserMenu
 import kotlinx.android.synthetic.main.fragment_planned_details.*
+import kotlinx.android.synthetic.main.fragment_planned_details.grade
+import kotlinx.android.synthetic.main.fragment_planned_details.noofheats
+import kotlinx.android.synthetic.main.fragment_planned_details.ordernum
+import kotlinx.android.synthetic.main.fragment_planned_details.productionunit
+import kotlinx.android.synthetic.main.fragment_planned_details.remarks
+import kotlinx.android.synthetic.main.fragment_planned_details.tonnage
+import kotlinx.android.synthetic.main.planningdetails.*
 
 
 class plannedDetailsFragment : Fragment() {
@@ -57,7 +64,7 @@ class plannedDetailsFragment : Fragment() {
 
 
         submitPlannedDetails.setOnClickListener {
-            val planneddate = plandate.text.toString()
+            val planneddate = productionDate.text.toString()
             val orNum = ordernum.text.toString()
             val prodUnit = productionunit.text.toString()
             val Grade = grade.text.toString()
@@ -66,8 +73,8 @@ class plannedDetailsFragment : Fragment() {
             val remark = remarks.text.toString()
 
             if(planneddate.isEmpty()){
-                plandate.error="Enter the date"
-                plandate.requestFocus()
+                productionDate.error="Enter the date"
+                productionDate.requestFocus()
             }
             else if(orNum.isEmpty()){
                 ordernum.error="Enter order number"

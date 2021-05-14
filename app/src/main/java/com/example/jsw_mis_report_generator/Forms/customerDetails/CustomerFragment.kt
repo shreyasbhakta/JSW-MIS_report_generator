@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
 import com.example.jsw_mis_report_generator.R
+import com.example.jsw_mis_report_generator.outputDetails.CustomerDetailsOutput
 import com.example.jsw_mis_report_generator.usermenu.userMenuScreen
 import kotlinx.android.synthetic.main.fragment_customer.*
 
@@ -35,6 +36,8 @@ class CustomerFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
 
+
+
         viewmodel= ViewModelProviders.of(this).get(CustomerViewmodel::class.java)
 
         customerUpdateDetails.setOnClickListener {
@@ -45,11 +48,23 @@ class CustomerFragment : Fragment() {
 
         }
 
-        /*customerViewDetails.setOnClickListener {
-            val intent = Intent(requireContext(), ::class.java)
+        customerViewDetails.setOnClickListener {
+            val intent = Intent(requireContext(), CustomerDetailsOutput::class.java)
             startActivity(intent)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
+            activity?.finish()
+
+        }
+
+       /* rpopup.setOnClickListener {
+            val popup = PopupMenu(requireContext(),rpopup)
+            popup.inflate(R.menu.rmenu)
+            popup.setOnMenuItemClickListener {
+                Toast.makeText(requireContext(), "Item : " + it.title, Toast.LENGTH_SHORT).show()
+                true
+            }
+            popup.show()
 
         }*/
 

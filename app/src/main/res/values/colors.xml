@@ -14,4 +14,18 @@
     <color name="yellow">#FDED59</color>
     <color name="light_red">#F3564A</color>
     <color name="blue">#FF3700B3</color>
+
+
+    <color name="colorEndBackground">#50FFFFFF</color>
+    <color name="colorLightText">#ECECEC</color>
+    <color name="colorFinalBlue">#bbdefb</color>
+
+    <color name="lightblue1">#90caf9</color>
+    <color name="darkblue1">#42a5f5</color>
+
+    <color name="lightblue2">#536dfe</color>
+    <color name="darkblue2">#3d5afe</color>
+
+    <color name="lightblue3">#26c6da</color>
+    <color name="darkblue3">#00acc2</color>
 </resources>

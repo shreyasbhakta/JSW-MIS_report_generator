@@ -70,12 +70,12 @@
                         app:layout_constraintVertical_bias="0.097" />
 
                     <EditText
-                        android:id="@+id/plandate"
+                        android:id="@+id/productionDate"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="15dp"
                         android:background="@drawable/text_background"
-                        android:hint="Plan Date (dd/mm/yyyy)"
+                        android:hint="Production Date (dd/mm/yyyy)"
                         android:inputType="date"
                         android:numeric="integer"
                         android:paddingLeft="20dp"
@@ -109,7 +109,7 @@
                         app:layout_constraintEnd_toEndOf="@+id/productionunit"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@+id/productionunit"
-                        app:layout_constraintTop_toTopOf="@id/plandate"
+                        app:layout_constraintTop_toTopOf="@id/productionDate"
                         app:layout_constraintVertical_bias="0.12"
                         app:layout_constraintWidth_percent=".8" />
 

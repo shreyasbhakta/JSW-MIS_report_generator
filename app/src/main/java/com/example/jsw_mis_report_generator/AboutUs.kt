@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import com.example.jsw_mis_report_generator.HomeScreen.HomeScreen
+import com.example.jsw_mis_report_generator.outputDetails.misReportWebview
 import com.example.jsw_mis_report_generator.usermenu.userMenuScreen
 import kotlinx.android.synthetic.main.activity_about_us.*
 
@@ -22,7 +23,7 @@ class AboutUs : AppCompatActivity() {
         }
 
         about_home.setOnClickListener {
-            val intent = Intent(applicationContext, HomeScreen::class.java)
+            val intent = Intent(applicationContext, misReportWebview::class.java)
             startActivity(intent)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)

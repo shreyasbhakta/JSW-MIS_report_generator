@@ -12,7 +12,12 @@
         android:roundIcon="@drawable/switching_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.JSWMIS_report_generator">
-        <activity android:name=".usermenu.UpdateUserDetails"></activity>
+        <activity android:name=".menuForReportDetails"></activity>
+        <activity android:name=".outputDetails.misReportWebview" />
+        <activity android:name=".outputDetails.plannedDetailsOutput" />
+        <activity android:name=".outputDetails.ActualDetailsOutput" />
+        <activity android:name=".outputDetails.CustomerDetailsOutput" />
+        <activity android:name=".usermenu.UpdateUserDetails" />
         <activity android:name=".AboutUs" />
         <activity android:name=".usermenu.userMenuScreen" />
         <activity android:name=".Forms.customerDetails.CustomerInputForm" />
