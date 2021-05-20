@@ -76,7 +76,7 @@
                         android:layout_marginTop="15dp"
                         android:background="@drawable/text_background"
                         android:hint="Production Date (dd/mm/yyyy)"
-                        android:inputType="date"
+                        android:inputType="date|datetime|text"
                         android:numeric="integer"
                         android:paddingLeft="20dp"
                         android:paddingTop="10dp"

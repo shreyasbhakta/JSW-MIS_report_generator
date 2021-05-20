@@ -67,6 +67,10 @@ class SignupFragment : Fragment() {
             }else if (empcode.isEmpty()){
                 signupEmpcode.error = "Empcode Empty"
                 signupEmpcode.requestFocus()
+            }
+            else if (signupEmpcode.text.toString().length<7){
+                signupEmpcode.error = "Invalid EmpCode"
+                signupEmpcode.requestFocus()
             }else if (password.isEmpty()){
                 SignupPassword.error = "Password Empty"
                 SignupPassword.requestFocus()

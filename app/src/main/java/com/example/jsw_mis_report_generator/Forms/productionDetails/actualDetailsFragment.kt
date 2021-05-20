@@ -105,7 +105,7 @@ class actualDetailsFragment : Fragment() {
             else{
                 refactualdetails = FirebaseDatabase.getInstance().getReference("Actual Details")
 
-                val ActualDetails= ActualDetailsData(prodDate,orNum, prodUnit, pgrade,fgrade, heatNum,ton, remark)
+                val ActualDetails= ActualDetailsData(prodDate,orNum, prodUnit,heatNum, pgrade,fgrade,ton, remark)
 
 
                 refactualdetails.child(orNum).setValue(ActualDetails)
