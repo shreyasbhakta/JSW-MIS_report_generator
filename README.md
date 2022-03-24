@@ -17,7 +17,7 @@ https://drive.google.com/drive/folders/1YhljUky3-6c6FBFqeY1zqZkX-q5jg3M_?usp=sha
 ## Contributors
 - <a href="https://github.com/shreyasbhakta">Shreyas</a>
 - <a href="https://github.com/pallavimaralla">Pallavi</a>
-- <a href="https://github.com/gunashekar04">Guna</a>
+- <a href="https://github.com/gunashekar04">Gunashekar</a>
 
 
 ## License
